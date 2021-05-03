@@ -1,5 +1,6 @@
 package at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.aggregates;
 
+import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.commands.BuchBestelltCommand;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.valueobjects.Status;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
@@ -15,7 +16,10 @@ public class Bestellung extends AbstractAggregateRoot<Bestellung> {
     private Status status;
 
     public Bestellung() {
+    }
 
+    public Bestellung(BuchBestelltCommand command) {
+        this.status = command.getStatus();
     }
 
     public Long getId() {
