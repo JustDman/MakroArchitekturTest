@@ -1,6 +1,7 @@
 package at.itkollegimst.hofer.pos1makro.test2.buchhandlung.interfaces.rest;
 
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.application.internal.commandservices.BuchBestelltCommandService;
+import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.aggregates.BestellId;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.commands.BuchBestelltCommand;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.valueobjects.Status;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,10 @@ public class BuchBestelltController {
 
     @PostMapping
     @ResponseBody
-    public Long bestellen() {
-        Long id = service.bestellen(new BuchBestelltCommand(Status.BESTELLT));
-        System.out.println("Buch bestellt " + id);
-        return id;
+    public BestellId bestellen() {
+        BestellId bestellId = service.bestellen(new BuchBestelltCommand());
+        System.out.println("Buch bestellt " + bestellId.getBestellid());
+        return bestellId;
     }
 
 }

@@ -1,4 +1,4 @@
-package at.itkollegimst.hofer.pos1makro.test2.druckerei;
+package at.itkollegimst.hofer.pos1makro.test2.buchhandlung;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

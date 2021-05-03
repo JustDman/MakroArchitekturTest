@@ -2,20 +2,21 @@ package at.itkollegimst.hofer.pos1makro.test2.shareddomain.events;
 
 public class BuchBestelltEventData {
 
-    private Long id;
+    private String bestellid;
+
     public BuchBestelltEventData() {
 
     }
 
-    public BuchBestelltEventData(Long id){
-        this.id = id;
+    public BuchBestelltEventData(String bestellid){
+        this.bestellid = bestellid;
     }
 
-    public Long getId() {
-        return id;
+    public String getId() {
+        return bestellid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(String bestellid) {
+        this.bestellid = bestellid;
     }
 }
