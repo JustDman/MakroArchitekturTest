@@ -9,21 +9,21 @@ import org.springframework.data.domain.AbstractAggregateRoot;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "bestellung")
 public class Bestellung extends AbstractAggregateRoot<Bestellung> {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-
-    @Embedded
+    
+    @Enumerated(value=EnumType.STRING)
     private Status status;
 
     public Bestellung() {
     }
 
     public Bestellung(BuchBestelltCommand command) {
-        this.status = command.getStatus();
         addDomainEvent(new BuchBestelltEvent(new BuchBestelltEventData(this.id)));
-        this.status = Status.BESTELLT;
+        this.status = command.getStatus();
     }
 
     private void addDomainEvent(Object event) {
