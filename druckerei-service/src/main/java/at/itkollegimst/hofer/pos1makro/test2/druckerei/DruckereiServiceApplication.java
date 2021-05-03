@@ -1,13 +1,13 @@
-package at.itkollegimst.hofer.pos1makro.test2.buchhandlung;
+package at.itkollegimst.hofer.pos1makro.test2.druckerei;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BuchhandlungServiceApplication {
+public class DruckereiServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BuchhandlungServiceApplication.class, args);
+		SpringApplication.run(DruckereiServiceApplication.class, args);
 	}
 
 }
