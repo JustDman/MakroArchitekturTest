@@ -34,15 +34,19 @@ public class Bestellung extends AbstractAggregateRoot<Bestellung> {
         registerEvent(event);
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public Status getStatus() {
         return status;
     }
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public String getBestellid() {
+        return bestellid.getBestellid();
+    }
+
+    public void setBestellid(BestellId bestellid) {
+        this.bestellid = bestellid;
     }
 }
