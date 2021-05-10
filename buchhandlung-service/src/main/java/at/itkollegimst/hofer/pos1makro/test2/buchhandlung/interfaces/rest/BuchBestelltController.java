@@ -3,7 +3,6 @@ package at.itkollegimst.hofer.pos1makro.test2.buchhandlung.interfaces.rest;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.application.internal.commandservices.BuchBestelltCommandService;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.aggregates.BestellId;
 import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.commands.BuchBestelltCommand;
-import at.itkollegimst.hofer.pos1makro.test2.buchhandlung.domain.model.valueobjects.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
